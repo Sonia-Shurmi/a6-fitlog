@@ -4,6 +4,7 @@ import { WorkoutContext } from "@/context/WorkoutProvider";
 import { Workout } from "@/types/workout.type";
 import React from "react";
 import { toast } from "react-toastify";
+import { FaRegHeart } from "@react-icons/all-files/fa/FaRegHeart";
 
 const SaveLater = ({ workout }: { workout: Workout }) => {
   const { saveLater, setSaveLater } = React.useContext(
@@ -15,7 +16,7 @@ const SaveLater = ({ workout }: { workout: Workout }) => {
 
   const handleSaveForLater = () => {
     const alreadyExists = saveLater.some(
-      (item) => item.id === workout.id
+      (item) => item.id === workout.id,
     );
 
     if (alreadyExists) {
@@ -30,11 +31,12 @@ const SaveLater = ({ workout }: { workout: Workout }) => {
 
   return (
     <button
+      type="button"
       onClick={handleSaveForLater}
-      className="btn border border-[#C2F800] bg-transparent px-6 font-bold text-[#C2F800] hover:bg-[#C2F800] hover:text-black"
+      className="btn w-full border border-[#C2F800] bg-transparent px-4 text-sm font-bold text-[#C2F800] hover:bg-[#C2F800] hover:text-black sm:w-auto sm:px-6"
     >
-      <span>♡</span>
-      Save for later
+      <FaRegHeart className="text-base sm:text-lg" />
+      <span>Save for later</span>
     </button>
   );
 };

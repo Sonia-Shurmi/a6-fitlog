@@ -4,24 +4,31 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
-      <aside className="grid-flow-col items-center">
-        <Link href="/" className="flex items-center">
-            <Image
+    <footer className="mt-auto w-full border-t border-[#1C1F26] bg-black text-white">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-center sm:px-6 md:flex-row md:text-left lg:px-8">
+
+        {/* Logo */}
+        <Link href="/" className="flex shrink-0 items-center">
+          <Image
             src={logo}
             alt="Fitlog"
             width={120}
             height={40}
-            priority
             className="h-[40px] w-auto"
-            />
-            <div className="ml-2 text-xl font-bold text-white">
+          />
+
+          <span className="ml-2 text-xl font-bold text-white">
             FITLOG
-            </div>
+          </span>
         </Link>
-      </aside>
-      <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <p>© {new Date().getFullYear()} FitLog — Workout Library. Train hard, log honest.</p>
+
+        {/* Copyright */}
+        <p className="text-xs leading-5 text-white/50 sm:text-sm">
+          © {new Date().getFullYear()} FitLog — Workout Library.
+          <span className="hidden sm:inline"> </span>
+          Train hard, log honest.
+        </p>
+
       </div>
     </footer>
   );

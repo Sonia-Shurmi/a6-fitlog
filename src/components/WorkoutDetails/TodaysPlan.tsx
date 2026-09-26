@@ -4,6 +4,7 @@ import { WorkoutContext } from "@/context/WorkoutProvider";
 import { Workout } from "@/types/workout.type";
 import React from "react";
 import { toast } from "react-toastify";
+import { FaPlus } from "@react-icons/all-files/fa/FaPlus";
 
 const TodaysPlan = ({ workout }: { workout: Workout }) => {
   const { todaysplan, setTodaysplan } = React.useContext(
@@ -15,7 +16,7 @@ const TodaysPlan = ({ workout }: { workout: Workout }) => {
 
   const handleAddToPlan = () => {
     const alreadyExists = todaysplan.some(
-      (item) => item.id === workout.id
+      (item) => item.id === workout.id,
     );
 
     if (alreadyExists) {
@@ -30,11 +31,12 @@ const TodaysPlan = ({ workout }: { workout: Workout }) => {
 
   return (
     <button
+      type="button"
       onClick={handleAddToPlan}
-      className="btn border-none bg-[#C2F800] px-6 font-bold text-black hover:bg-[#C2F800]/90"
+      className="btn w-full border-none bg-[#C2F800] px-4 text-sm font-bold text-black hover:bg-[#C2F800]/90 sm:w-auto sm:px-6"
     >
-      <span>＋</span>
-      Add to todays plan
+      <FaPlus className="text-sm sm:text-base" />
+      <span>Add to today's plan</span>
     </button>
   );
 };

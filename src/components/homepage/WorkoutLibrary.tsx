@@ -10,7 +10,7 @@ const getWorkouts = async (): Promise<Workout[]> => {
 
 const WorkoutLibrary = async () => {
   const workoutsData = await getWorkouts();
-  console.log(workoutsData);
+  
   return (
     <section id="library" className="bg-black px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
