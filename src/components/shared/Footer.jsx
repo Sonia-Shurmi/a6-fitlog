@@ -21,7 +21,7 @@ const Footer = () => {
         </Link>
       </aside>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+        <p>© {new Date().getFullYear()} FitLog — Workout Library. Train hard, log honest.</p>
       </div>
     </footer>
   );
