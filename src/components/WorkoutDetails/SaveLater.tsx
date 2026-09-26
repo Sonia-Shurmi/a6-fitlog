@@ -2,14 +2,16 @@
 import { WorkoutContext } from '@/context/WorkoutProvider';
 import { Workout } from '@/types/workout.type';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const SaveLater = ({ workout }: { workout: Workout }) => {
-    const { saveLater, setSaveLater } = React.useContext(WorkoutContext);
+    const { saveLater, setSaveLater } = React.useContext(WorkoutContext) as {
+        saveLater: Workout[];
+        setSaveLater: React.Dispatch<React.SetStateAction<Workout[]>>;
+    };
     const handleSaveForLater = () => {
-        // Logic to save the workout for later
-        console.log("Workout saved for later", workout);
         setSaveLater([...saveLater, workout]);
-        alert(`${workout.name} has been saved for later!`);
+        toast.success(`${workout.name} has been saved for later!`);
     };
 
     return (
