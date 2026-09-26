@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Workout } from "@/type";
+import type { Workout } from "@/types/workout.type";
 
 import { FaRegClock } from "@react-icons/all-files/fa/FaRegClock";
 import { FaFire } from "@react-icons/all-files/fa/FaFire";
@@ -34,7 +34,7 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
 
           {/* Muscle Groups */}
           <div className="mb-4 flex flex-wrap gap-2">
-            {workout.muscleGroups.map((muscle) => (
+            {workout.muscleGroups.map((muscle: string) => (
               <span
                 key={muscle}
                 className="rounded-full bg-[#C2F800]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-[#C2F800] sm:px-3 sm:text-[11px]"
