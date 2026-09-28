@@ -1,83 +1,195 @@
-<!-- FitLog -->
+# 💪 FitLog
 
-Train with intent. Log every set.
+> **Train with intent. Log every set.**
 
-FitLog is a modern workout library and personal workout-planning web application. Users can browse different exercises, view detailed workout information, add workouts to today's plan, save workouts for later, and manage their selected exercises from a dedicated My Plan page.
+FitLog is a modern workout library and personal workout-planning web application built with Next.js and TypeScript.
 
+Users can explore workouts, view detailed exercise information, build a personalized daily workout plan, save workouts for later, and manage their selected workouts from one place.
 
-<!-- Technologies Used -->
+## 🌐 Live Demo
 
-1. Next.js — React framework for building the application
-2. React — Component-based user interface
-3. TypeScript — Type-safe development
-4. Tailwind CSS — Responsive and utility-first styling
-5. DaisyUI — UI components and styling utilities
-6. React Icons — Icons throughout the application
-7. React Toastify — Toast notifications for user actions
-8. Next/Image — Optimized workout images
-9. Context API — Global workout plan and saved-workout state management
+**[Visit FitLog](https://a6-fitlog1.vercel.app/)**
 
+## 📸 Preview
 
-<!-- Key Features -->
+<!-- Add a screenshot of the live project here -->
 
-Workout Library::
+![FitLog Preview](./src/assets/banner.png)
 
-Browse a collection of workouts with useful information such as:
+## 🛠️ Technologies Used
+
+* **Next.js** — React framework for building the application
+* **React** — Component-based user interface
+* **TypeScript** — Type-safe development
+* **Tailwind CSS** — Utility-first styling
+* **DaisyUI** — UI components
+* **React Icons** — Icons throughout the application
+* **React Toastify** — User feedback and notifications
+* **Context API** — Global workout plan and saved-workout state
+* **Next/Image** — Optimized workout images
+
+## ✨ Key Features
+
+### 🏋️ Workout Library
+
+Browse a collection of workouts with information including:
 
 * Workout name
 * Muscle groups
 * Equipment
+* Difficulty
 * Duration
 * Calories burned
+* Sets and reps
 * Rating
-* Workout image
+* Workout instructions
 
-Users can select a workout to view its detailed information.
+### 🔎 Workout Details
 
-<!-- Today's Workout Plan -->
+Users can open individual workouts to view detailed information and instructions.
 
-Users can add workouts to their "Today's Plan" and manage their daily workout list.
+### 📋 Today's Plan
 
-The plan also calculates:
+Users can add workouts to their daily plan.
+
+The plan automatically displays:
 
 * Total exercises
 * Total workout duration
 * Total calories
 
-Duplicate workouts are prevented from being added to the plan.
+Duplicate workouts are prevented.
 
-Save for Later:
+### ❤️ Save for Later
 
-Users can save workouts they are interested in for later.
+Users can save workouts they want to revisit later.
 
-The "Save for Later" section allows users to:
+Saved workouts can be viewed, opened, and removed from the saved list.
 
-* View saved workouts
-* Open workout details
-* Remove saved workouts
+### 📊 Workout Sorting
 
-Sorting & Workout Management
+The My Plan page allows users to sort workouts by:
 
-The My Plan page provides sorting options to organize the current workout list by:
+* Duration
+* Calories
+* Rating
 
-Duration
-Calories
-Rating
+### ✅ Workout Management
 
-Users can also remove workouts from their plan or saved list and mark planned workouts as completed.
+Users can:
 
-Responsive & User-Friendly Design
+* View workout details
+* Remove workouts
+* Mark planned workouts as completed
+* Manage saved workouts
 
-FitLog is designed to work across different screen sizes, including:
+### 📱 Responsive Design
 
-Desktop
-Tablet
-Mobile
+FitLog is designed for:
 
-The interface includes responsive navigation, workout cards, empty states, toast notifications, and mobile-friendly layouts for a smooth user experience.
+* Desktop
+* Tablet
+* Mobile
 
+The interface includes responsive navigation, workout cards, empty states, notifications, and mobile-friendly layouts.
 
-Project Goal
+## 🔌 API
 
-FitLog is designed to provide a simple and focused way to discover workouts, build a daily exercise plan, and keep track of selected workouts without unnecessary complexity.
+Workout information is loaded from an external API:
 
+`https://api.abcz.workers.dev/api/fitlog`
+
+The application fetches workout data dynamically and displays it in the workout library.
+
+## 📦 Dependencies
+
+### Main Dependencies
+
+* `next`
+* `react`
+* `react-dom`
+* `@react-icons/all-files`
+* `react-toastify`
+
+### Development Dependencies
+
+* `typescript`
+* `tailwindcss`
+* `@tailwindcss/postcss`
+* `daisyui`
+* `eslint`
+* `eslint-config-next`
+* `@types/node`
+* `@types/react`
+* `@types/react-dom`
+
+## 🚀 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Sonia-Shurmi/a6-fitlog.git
+```
+
+### 2. Go to the project directory
+
+```bash
+cd a6-fitlog
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+### 5. Open in your browser
+
+```text
+http://localhost:3000
+```
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/
+│   ├── my-plan/
+│   ├── workouts/
+│   │   └── [workoutid]/
+│   └── page.tsx
+│
+├── components/
+│   ├── homepage/
+│   ├── shared/
+│   └── WorkoutDetails/
+│
+├── context/
+│   └── WorkoutProvider.tsx
+│
+├── assets/
+│
+└── types/
+    └── workout.type.ts
+```
+
+## 🎯 Project Goal
+
+FitLog was created to provide a simple and focused way to discover workouts, build a daily workout plan, and manage selected exercises without unnecessary complexity.
+
+## 🔗 Links
+
+* 🌐 **Live Demo:** https://a6-fitlog1.vercel.app/
+* 💻 **Repository:** https://github.com/Sonia-Shurmi/a6-fitlog
+
+---
+
+<p align="center">
+  Built with ❤️ using Next.js
+</p>
